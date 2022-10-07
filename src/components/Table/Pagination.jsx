@@ -6,6 +6,14 @@ import { MdFirstPage } from 'react-icons/md'
 import { MdChevronLeft } from 'react-icons/md'
 import { MdChevronRight } from 'react-icons/md'
 
+/**
+* Displays table pagination
+*
+* @return jsx
+* 
+* @version 1.0
+* 
+*/
 const Pagination = (props) => {
 	const dispatch = useDispatch()
 	function handlePrevButton(){

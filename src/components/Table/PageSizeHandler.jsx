@@ -3,6 +3,14 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 
+/**
+* Allows to handle per page rows number
+*
+* @return jsx
+* 
+* @version 1.0
+* 
+*/
 const PageSizeHandler = (props) => {
 	const dispatch = useDispatch()
 	const initialValue = useSelector(state => state.entriesByPage)

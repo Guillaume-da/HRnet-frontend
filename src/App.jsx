@@ -2,7 +2,6 @@ import React from 'react'
 import Loader from './components/Loader/Loader'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/Header/Header'
-// import Employees from './pages/Employees'
 import { ToastContainer} from 'react-toastify'
 import {AnimatePresence} from 'framer-motion'
 

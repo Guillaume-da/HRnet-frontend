@@ -2,6 +2,14 @@
 import React from 'react'
 import { m, LazyMotion, domAnimation } from 'framer-motion'
 
+/**
+* Title of pages
+*
+* @return jsx
+* 
+* @version 1.0
+* 
+*/
 function Title(props) {
 	return (
 		<LazyMotion features={domAnimation}>

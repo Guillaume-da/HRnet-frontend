@@ -4,6 +4,14 @@ import { CgArrowRightR } from 'react-icons/cg'
 import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 
+/**
+* Displays a link in header
+*
+* @return jsx
+* 
+* @version 1.0
+* 
+*/
 const NavLink =(props) => {
 	const page = props.page
 	if(page === 'Home') {

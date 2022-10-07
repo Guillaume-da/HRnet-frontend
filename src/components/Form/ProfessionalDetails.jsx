@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 
 /**
-* Displays form of third step 
+* Displays form of third step, dispatch datas in Redux
 *
 * @return jsx - form
 * 
@@ -56,8 +56,7 @@ const ProfessionalDetails = () => {
 						transition
 						ease-in-out
 						m-0
-						focus:text-gray-700 focus:bg-white focus:border-lime-600 focus:outline-none" 
-						aria-label="Select"
+						focus:text-gray-700 focus:bg-zinc-100 focus:border-none active:border-stone-700 focus:outline-none" aria-label="State selector"
 						name="department"
 						defaultValue={department ? department : ''}
 						onChange={(event) => dispatch({type: 'form/addEmployee', payload: {...form, department: event.target.value}}) }

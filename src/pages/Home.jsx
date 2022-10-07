@@ -20,7 +20,7 @@ const Home = () => {
 				>	
 					<div className="min-h-full lg:h-auto mx-auto rounded-2xl bg-white pb-2 shadow-xl max-w-screen-xl dark:bg-zinc-900">
 						<div className="horizontal xl:container mt-5">
-							<div className="my-10 p-2 lg:p-10">
+							<div id="form" className="my-10 p-2 lg:p-10">
 								<Form />
 							</div>
 						</div>

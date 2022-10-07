@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 
 /**
-* Displays form of first step 
+* Displays form of first step, dispatch datas in Redux
 *
 * @return jsx - form
 * 

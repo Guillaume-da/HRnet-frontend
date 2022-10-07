@@ -1,4 +1,32 @@
-/* eslint-disable no-unused-expressions */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Table/Table.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Table/Table.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/* eslint-disable no-unused-expressions */
 import React, { useState, Suspense } from 'react'
 import { SortDownIcon, SortUpIcon, SortIcon } from '../Icon/Icon'
 import 'react-tailwind-flex-modal/dist/index.css'
@@ -57,7 +85,7 @@ const Table = ({ columns, data }) => {
 	const [id, setId] = useState('')
 
 	const formComponent = 
-	<FormModal 
+	&lt;FormModal 
 		setShowModal={setShowModal} 
 		setFirstName={setFirstName} 
 		firstName={firstName} 
@@ -185,9 +213,9 @@ const Table = ({ columns, data }) => {
 				id: 'Edit',
 				Header: 'Edit',
 				Cell: ({ row }) => (
-					<button onClick={() => handleModify(row)} className="bg-lime-700 hover:bg-lime-800 text-gray-100 text-xs py-1 px-3 rounded inline-flex items-center" aria-label="Edit">
-						<RiEdit2Line className="text-base" />
-					</button>
+					&lt;button onClick={() => handleModify(row)} className="bg-lime-700 hover:bg-lime-800 text-gray-100 text-xs py-1 px-3 rounded inline-flex items-center" aria-label="Edit">
+						&lt;RiEdit2Line className="text-base" />
+					&lt;/button>
 				),
 			},
 			...columns,
@@ -198,9 +226,9 @@ const Table = ({ columns, data }) => {
 				id: 'Remove',
 				Header: 'Remove',
 				Cell: ({ row }) => (
-					<button onClick={() => handleDelete(row)} className="bg-rose-700 dark:bg-red-400 hover:bg-red-900 text-gray-100 text-xs py-1 px-3 rounded inline-flex items-center" aria-label="Remove">
-						<RiDeleteBinLine className="text-base" />
-					</button>
+					&lt;button onClick={() => handleDelete(row)} className="bg-rose-700 dark:bg-red-400 hover:bg-red-900 text-gray-100 text-xs py-1 px-3 rounded inline-flex items-center" aria-label="Remove">
+						&lt;RiDeleteBinLine className="text-base" />
+					&lt;/button>
 				),
 			},
 			...columns,
@@ -239,9 +267,9 @@ const Table = ({ columns, data }) => {
 	)
 
 	return (
-		<>
+		&lt;>
 			{showModal ?
-				<Modal 
+				&lt;Modal 
 					currentModal={currentModal}
 					warningTitle={warningTitle} 
 					closeMessage={closeMessage} 
@@ -276,44 +304,44 @@ const Table = ({ columns, data }) => {
 					handleAproval={handleAproval}
 				/>
 				: 
-				<div></div>
+				&lt;div>&lt;/div>
 			}
 			
-			<div className="flex flex-col-reverse items-start lg:items-center lg:flex-row justify-between dark:bg-zinc-900 w-auto ml-4 gap-y-3.5"> 
+			&lt;div className="flex flex-col-reverse items-start lg:items-center lg:flex-row justify-between dark:bg-zinc-900 w-auto ml-4 gap-y-3.5"> 
 				
-				<PageSizeHandler state={state} setPageSize={setPageSize} />
-				<Dropdown drag rows={rows} />
+				&lt;PageSizeHandler state={state} setPageSize={setPageSize} />
+				&lt;Dropdown drag rows={rows} />
 				
-				<Suspense>	
-					<GlobalFilter
+				&lt;Suspense>	
+					&lt;GlobalFilter
 						useAsyncDebounce={useAsyncDebounce}
 						preGlobalFilteredRows={preGlobalFilteredRows}
 						globalFilter={state.globalFilter}
 						setGlobalFilter={setGlobalFilter}
 					/>
-				</Suspense>
+				&lt;/Suspense>
 				{headerGroups.map((headerGroup) =>
 					headerGroup.headers.map((column, index) =>
 						column.Filter ? (
-							<div key={`${column}-${index}`}>{column.render('Filter')}</div>
+							&lt;div key={`${column}-${index}`}>{column.render('Filter')}&lt;/div>
 						) : null
 					)
 				)}
-			</div>
-			<div className="flex flex-col">
-				<div className="my-2 overflow-x-auto min-w-full -mx-4 lg:-mx-auto">
-					<div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-						<div className="shadow overflow-hidden border-b border-gray-200 dark:border-stone-700 sm:rounded-lg px-4 pb-2 pt-3 dark:bg-zinc-800">
-							<table
+			&lt;/div>
+			&lt;div className="flex flex-col">
+				&lt;div className="my-2 overflow-x-auto min-w-full -mx-4 lg:-mx-auto">
+					&lt;div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+						&lt;div className="shadow overflow-hidden border-b border-gray-200 dark:border-stone-700 sm:rounded-lg px-4 pb-2 pt-3 dark:bg-zinc-800">
+							&lt;table
 								{...getTableProps()}
 								className="min-w-full divide-y divide-gray-200 dark:divide-zinc-900"
 							>
-								<thead className="bg-yellow-50">
+								&lt;thead className="bg-yellow-50">
 									{headerGroups.map((headerGroup, index) => (
-										<tr {...headerGroup.getHeaderGroupProps()} key={`${headerGroup}-${index}`}>
+										&lt;tr {...headerGroup.getHeaderGroupProps()} key={`${headerGroup}-${index}`}>
 											{headerGroup.headers.map((column, index) => (
 											
-												<th
+												&lt;th
 													key={`${column}-${index}`}
 													scope="col"
 													className="group px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:bg-neutral-600 dark:text-white"
@@ -321,66 +349,66 @@ const Table = ({ columns, data }) => {
 														column.getSortByToggleProps()
 													)} 
 												>
-													<div className="flex items-center justify-between">
+													&lt;div className="flex items-center justify-between">
 														{column.render('Header')}
-														<span>
-															{column.isSorted && column.id != 'Remove' && column.id != 'Edit' ? (
+														&lt;span>
+															{column.isSorted &amp;&amp; column.id != 'Remove' &amp;&amp; column.id != 'Edit' ? (
 																column.isSortedDesc ? (
-																	<SortDownIcon className="w-4 h-4 text-lime-600" />
+																	&lt;SortDownIcon className="w-4 h-4 text-lime-600" />
 																) : (
-																	<SortUpIcon className="w-4 h-4 text-lime-600" />
+																	&lt;SortUpIcon className="w-4 h-4 text-lime-600" />
 																)
 															) : (
-																column.id != 'Remove' && column.id != 'Edit' ? <SortIcon className="w-4 h-4 text-gray-300 " /> : <div></div> 
+																column.id != 'Remove' &amp;&amp; column.id != 'Edit' ? &lt;SortIcon className="w-4 h-4 text-gray-300 " /> : &lt;div>&lt;/div> 
 															)}
-														</span>
-													</div>
-												</th>
+														&lt;/span>
+													&lt;/div>
+												&lt;/th>
 														
 											))}
-										</tr>
+										&lt;/tr>
 									))}
-								</thead>
-								<tbody
+								&lt;/thead>
+								&lt;tbody
 									{...getTableBodyProps()}
 									className="bg-white divide-y divide-gray-200 dark:divide-stone-600"
 								>
-									{data && data.length === 0 ? <p>No data available in table</p> : <></>}
-									{rows.length === 0 ? <div className="py-8"><p>There is no result, sorry.</p></div> : <></>}
+									{data &amp;&amp; data.length === 0 ? &lt;p>No data available in table&lt;/p> : &lt;>&lt;/>}
+									{rows.length === 0 ? &lt;div className="py-8">&lt;p>There is no result, sorry.&lt;/p>&lt;/div> : &lt;>&lt;/>}
 									{page.map((row, index) => {
 										prepareRow(row)
 										return (
-											<tr {...row.getRowProps()} key={`${row}-${index}`} className="even:bg-stone-100 dark:bg-zinc-800 dark:text-white ">
+											&lt;tr {...row.getRowProps()} key={`${row}-${index}`} className="even:bg-stone-100 dark:bg-zinc-800 dark:text-white ">
 												{row.cells.map((cell, index) => {
 													return (
-														<td
+														&lt;td
 															key={`${cell}-${index}`}
 															{...cell.getCellProps()}
 															className="px-6 py-4 whitespace-nowrap font-normal text-sm text-slate-500 dark:text-white dark:odd:bg-zinc-900"
 														>
 															{cell.render('Cell')}
-														</td>	
+														&lt;/td>	
 													)
 												})}
-											</tr>	
+											&lt;/tr>	
 										)
 									})}
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
+								&lt;/tbody>
+							&lt;/table>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
 			
-			<div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between w-full px-4">
-				<div >
-					<Toggle/>
-				</div>
-				<div className="lg:ml-40 text-center mb-6 mt-4">
-					<span >Showing {state.pageIndex === 0 ? + 1 : (state.pageIndex * state.pageSize) + 1} to {state.pageIndex === 0 ? state.pageSize : (state.pageSize * (state.pageIndex + 1))} of <span className="text-lime-600 font-semibold ml-1">{ data?.length } entries</span></span>
-				</div>
+			&lt;div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between w-full px-4">
+				&lt;div >
+					&lt;Toggle/>
+				&lt;/div>
+				&lt;div className="lg:ml-40 text-center mb-6 mt-4">
+					&lt;span >Showing {state.pageIndex === 0 ? + 1 : (state.pageIndex * state.pageSize) + 1} to {state.pageIndex === 0 ? state.pageSize : (state.pageSize * (state.pageIndex + 1))} of &lt;span className="text-lime-600 font-semibold ml-1">{ data?.length } entries&lt;/span>&lt;/span>
+				&lt;/div>
 					
-				<Pagination 
+				&lt;Pagination 
 					state={state} 
 					previousPage={previousPage} 
 					canPreviousPage={canPreviousPage}
@@ -390,9 +418,9 @@ const Table = ({ columns, data }) => {
 					gotoPage={gotoPage}
 				/>
 					
-			</div>
+			&lt;/div>
 			
-		</>
+		&lt;/>
 	)
 }
 
@@ -402,4 +430,26 @@ Table.propTypes = {
 	row: PropTypes.object
 }
 
-export default Table
+export default Table</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Adress">Adress</a></li><li><a href="global.html#Dropdown">Dropdown</a></li><li><a href="global.html#FormModal">FormModal</a></li><li><a href="global.html#GlobalFilter">GlobalFilter</a></li><li><a href="global.html#NavLink">NavLink</a></li><li><a href="global.html#PageSizeHandler">PageSizeHandler</a></li><li><a href="global.html#Pagination">Pagination</a></li><li><a href="global.html#PersonalDetails">PersonalDetails</a></li><li><a href="global.html#ProfessionalDetails">ProfessionalDetails</a></li><li><a href="global.html#Table">Table</a></li><li><a href="global.html#Title">Title</a></li><li><a href="global.html#Toggle">Toggle</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Fri Oct 07 2022 17:00:10 GMT+0200 (Central European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

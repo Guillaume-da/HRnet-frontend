@@ -2,6 +2,14 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 
+/**
+* Toggle allowing to activate or desactivate dark mode
+*
+* @return jsx
+* 
+* @version 1.0
+* 
+*/
 const Toggle = () => {
 	const dispatch = useDispatch()
 	const darkMode = useSelector(state => state.darkMode)

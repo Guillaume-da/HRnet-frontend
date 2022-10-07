@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 /**
-* Table search function
+* Allows to set a filter for searching option
 *
 * @return jsx
 * 
