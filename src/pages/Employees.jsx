@@ -1,10 +1,10 @@
 import React, { useMemo, useEffect, useState, Suspense } from 'react'
 import Loader from '../components/Loader/Loader'
-// import Table from '../components/Table/Table'
+import Table from '../components/Table/Table'
 import axios from 'axios'
 import { m, LazyMotion, domAnimation } from 'framer-motion'
-// import NavLink from '../components/NavLink/NavLink'
-// import Title from '../components/Title/Title'
+import NavLink from '../components/NavLink/NavLink'
+import Title from '../components/Title/Title'
 
 const apiBaseUrl = axios.create({
 	baseURL: 'https://safe-oasis-98646.herokuapp.com/',
@@ -89,10 +89,6 @@ const Employees = () => {
 			accessor: '_id'
 		},
 	]), [])
-
-	const Title = React.lazy(() => import('../components/Title/Title'))
-	const NavLink = React.lazy(() => import('../components/NavLink/NavLink'))
-	const Table = React.lazy(() => import('../components/Table/Table'))
 		
 	if(usersData) {
 		return (
