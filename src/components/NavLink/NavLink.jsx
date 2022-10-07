@@ -32,7 +32,7 @@ const NavLink =(props) => {
 				</div>
 			</motion.div>
 		)
-	} else {
+	} else if(page === 'Employees'){
 		return (
 			<motion.div
 				initial={{ opacity: 0}}
