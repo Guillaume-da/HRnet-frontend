@@ -1,5 +1,6 @@
 import React, {useState, Suspense} from 'react'
 import FormLoader from '../Loader/Loader'
+import PersonalDetails from './PersonalDetails'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { Modal } from 'react-tailwind-flex-modal'
@@ -11,7 +12,7 @@ const Form = () => {
 	function resetStepper() {
 		dispatch({type: 'formPage/formPageHandler', payload: 1})
 	}
-	
+
 	const currentPage = useSelector(state => state.page)
 	const [showModal, setShowModal] = useState(false)
 	const [currentModal, setCurrentModal] = useState('')
@@ -64,13 +65,12 @@ const Form = () => {
 		setCurrentModal('')
 	}
 
-	const PersonalDetails = React.lazy(()=> import('./PersonalDetails'))
 	const Pagination = React.lazy(()=> import('./Pagination'))
 	const Stepper = React.lazy(()=> import('./Stepper'))
 	const ProfessionalDetails = React.lazy(()=> import('./ProfessionalDetails'))
 	const Adress = React.lazy(()=> import('./Adress'))
 	const Complete = React.lazy(()=> import('./Complete'))
-	
+
 	return (
 		<>
 			<Suspense fallback={<FormLoader/>}>	
@@ -82,7 +82,7 @@ const Form = () => {
 					setShowModal={setShowModal} 
 					setCurrentModal={setCurrentModal}
 				/>
-			
+
 				{showModal ? 
 					<Modal 
 						setShowModal={setShowModal} 
