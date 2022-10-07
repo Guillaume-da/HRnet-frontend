@@ -16,7 +16,7 @@ const Home = () => {
 					initial={{ opacity: 0, x: '-60%'}}
 					animate={{ opacity: 1, x: 0 }}
 					exit={{ opacity: 0, x: '-20%'}}
-					transition={{ duration: 0.65, ease: [0.6, 0.01, -0.05, 0.95] }}
+					transition={{ duration: 0.35, ease: [0.6, 0.01, -0.05, 0.95] }}
 				>	
 					<div className="min-h-full lg:h-auto mx-auto rounded-2xl bg-white pb-2 shadow-xl max-w-screen-xl dark:bg-zinc-900">
 						<div className="horizontal xl:container mt-5">
