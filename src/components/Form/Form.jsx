@@ -1,6 +1,5 @@
 import React, {useState, Suspense} from 'react'
 import FormLoader from '../Loader/Loader'
-import PersonalDetails from './PersonalDetails'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { Modal } from 'react-tailwind-flex-modal'
@@ -65,6 +64,7 @@ const Form = () => {
 		setCurrentModal('')
 	}
 
+	const PersonalDetails = React.lazy(()=> import('./PersonalDetails'))
 	const Pagination = React.lazy(()=> import('./Pagination'))
 	const Stepper = React.lazy(()=> import('./Stepper'))
 	const ProfessionalDetails = React.lazy(()=> import('./ProfessionalDetails'))
