@@ -11,7 +11,8 @@ module.exports = {
 	theme: {
 		extend: {
 			spacing: {
-				'28': '105px'
+				'105': '105px',
+				'90': '70px'
 			},
 			animation: {
 				'fade-in-down': 'fade-in-down 0.5s ease-out',

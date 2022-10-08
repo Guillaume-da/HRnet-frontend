@@ -376,8 +376,8 @@ const Table = ({ columns, data }) => {
 				<div >
 					<Toggle/>
 				</div>
-				<div className="lg:ml-34 text-center mb-6 mt-4">
-					<span >Showing {state.pageIndex === 0 ? + 1 : (state.pageIndex * state.pageSize) + 1} to {state.pageIndex === 0 ? state.pageSize : (state.pageSize * (state.pageIndex + 1))} of <span className="text-lime-600 font-semibold ml-1">{ data?.length } entries</span></span>
+				<div className=" text-center mb-6 mt-4">
+					<span className="lg:ml-90">Showing {state.pageIndex === 0 ? + 1 : (state.pageIndex * state.pageSize) + 1} to {state.pageIndex === 0 ? state.pageSize : (state.pageSize * (state.pageIndex + 1))} of <span className="text-lime-600 font-semibold ml-1">{ data?.length } entries</span></span>
 				</div>
 					
 				<Pagination 

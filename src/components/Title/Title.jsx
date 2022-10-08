@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import { m, LazyMotion, domAnimation } from 'framer-motion'
+import PropTypes from 'prop-types'
 
 /**
 * Title of pages
@@ -23,6 +23,10 @@ function Title(props) {
 			</m.div>
 		</LazyMotion>
 	)
+}
+
+Title.propTypes = {
+	title: PropTypes.string.isRequired
 }
 
 export default Title
