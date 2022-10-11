@@ -98,9 +98,9 @@ const Employees = () => {
 					<NavLink page="Employees"/>
 					<LazyMotion features={domAnimation}>
 						<m.div
-							initial={{ opacity: 0, x: '-20%', y: 0}}
-							animate={{ opacity: 1, x: 0, y: 0}}
-							exit={{ opacity: 0, x: '-20%', y: 0 }}
+							initial={{ opacity: 0}}
+							animate={{ opacity: 1}}
+							exit={{ opacity: 0}}
 							transition={{ duration: 0.65, ease: [0.6, 0.01, -0.05, 0.95]}}
 						>
 							<div className="2xl:px-20 px-1 pt-2 dark:bg-zinc-800 w-full -mt-4">  

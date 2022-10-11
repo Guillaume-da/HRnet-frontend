@@ -3,7 +3,7 @@
 React application allowing to add employees in a table with a multi-steps form. Demo here: [https://wealth-health-hrnet.netlify.app/](https://wealth-health-hrnet.netlify.app/)
 
 # Documentation
-You can find the documentation here: [http://127.0.0.1:5500/docs/index.html](http://127.0.0.1:5500/docs/index.html) (please launch it with live server)
+You can find the documentation here: [http://127.0.0.1:5500/docs/index.html](http://127.0.0.1:5500/docs/index.html)
 
 # Getting Started with Create React App
 

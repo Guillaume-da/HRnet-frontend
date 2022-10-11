@@ -237,7 +237,9 @@ const Table = ({ columns, data }) => {
 	usePagination,
 	tableHooks
 	)
-
+	console.log('page',page)
+	console.log('data',data)
+	console.log('rows',rows)
 	return (
 		<>
 			{showModal ?
@@ -346,7 +348,8 @@ const Table = ({ columns, data }) => {
 									className="bg-white divide-y divide-gray-200 dark:divide-stone-600"
 								>
 									{data && data.length === 0 ? <p>No data available in table</p> : <></>}
-									{rows.length === 0 ? <div className="py-8"><p>There is no result, sorry.</p></div> : <></>}
+									{rows.length === 0 ? <tr><td className="py-8"><p>There is no result, sorry.</p></td></tr> : <></>}
+									{page.length === 0 && rows.length != 0 ? gotoPage(0) : ''}
 									{page.map((row, index) => {
 										prepareRow(row)
 										return (
@@ -365,6 +368,7 @@ const Table = ({ columns, data }) => {
 											</tr>	
 										)
 									})}
+									
 								</tbody>
 							</table>
 						</div>
