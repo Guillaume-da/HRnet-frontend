@@ -1,6 +1,11 @@
 # HRnet
 
-React application allowing to add employees in a table with a multi-steps form. Demo here: [https://wealth-health-hrnet.netlify.app/](https://wealth-health-hrnet.netlify.app/)
+HRnet is a React application allowing to add employees in a table with a multi-steps form. Demo here: [https://wealth-health-hrnet.netlify.app/](https://wealth-health-hrnet.netlify.app/)
+The purpose of this project was to convert an old Jquery application to React. Original project here: [https://github.com/OpenClassrooms-Student-Center/P12_Front-end](https://github.com/OpenClassrooms-Student-Center/P12_Front-end)
+
+
+# Backend
+This project works with a backend you can find here: [https://github.com/Guillaume-da/HRnet-backend](https://github.com/Guillaume-da/HRnet-backend)
 
 # Documentation
 You can find the documentation here: [http://127.0.0.1:5500/docs/index.html](http://127.0.0.1:5500/docs/index.html)
